@@ -23,32 +23,185 @@
         <div class="sideMenu" id="layoutSidenav_nav"></div>
             <div id="layoutSidenav_content">
                 <main>
+
                     <div class="container-fluid">
-                        <h1 class="mt-4">주간랭킹</h1>
+                        <h1 class="mt-4">데이터 컬럼 정의서</h1>
                         <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item active">주간랭킹 & 음식랭킹</li>
+                            <li class="breadcrumb-item active">사건사고 데이터</li>
                         </ol>
-                        <div class="row">
-                            <div class="col-sm-6 mb-5">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <i class="fas fa-chart-line"></i>
-                                        주간랭킹
-                                    </div>
-                                    <div class="userRank card-body">
-                                        
-                                    </div>
-                                </div>
+                        <div class="card mb-1">
+                            <div class="card-header">
+                                <i class="fas fa-table mr-1"></i>
+                                데이터 컬럼 정의서 표
                             </div>
-                            <div class="col-sm-6">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <i class="fa fa-thumbs-up"></i>
-                                        음식랭킹
-                                    </div>
-                                    <div class="foodRank card-body">
-                                        
-                                    </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-striped" id="food-table" width="30%" cellspacing="0">
+                                        <thead>
+                                            <tr>
+                                                <td scope="col">순서</td>
+                                                <td scope="col">컬럼영문명</td>
+                                                <td scope="col">컬럼한글명</td>
+                                                <td scope="col">데이터타입</td>
+                                                <td scope="col">길이</td>
+                                                <td scope="col">PK여부</td>
+                                                <td scope="col">NOT NULL 여부</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <td>1</td>
+                                            <td>DataSetType</td>
+                                            <td>데이터셋구분</td>
+                                            <td>VARCHAR</td>
+                                            <td>10</td>
+                                            <td>Y</td>
+                                            <td>Y</td>
+                                        </tbody>
+                                        <tbody>
+                                            <td>2</td>
+                                            <td>action</td>
+                                            <td>액션</td>
+                                            <td>VARCHAR</td>
+                                            <td>10</td>
+                                            <td>N</td>
+                                            <td>Y</td>
+                                        </tbody>
+                                        <tbody>
+                                            <td>3</td>
+                                            <td>content_id</td>
+                                            <td>식별자</td>
+                                            <td>VARCHAR</td>
+                                            <td>30</td>
+                                            <td>Y</td>
+                                            <td>Y</td>
+                                        </tbody>
+                                        <tbody>
+                                            <td>4</td>
+                                            <td>send_date</td>
+                                            <td>발행일자</td>
+                                            <td>CHAR(8)(YYYYMMDD)</td>
+                                            <td>8</td>
+                                            <td>N</td>
+                                            <td>Y</td>
+                                        </tbody>
+                                        <tbody>
+                                            <td>5</td>
+                                            <td>send_time</td>
+                                            <td>발행시각</td>
+                                            <td>CHAR(6)(HHMISS)</td>
+                                            <td>6</td>
+                                            <td>N</td>
+                                            <td>Y</td>
+                                        </tbody>
+                                        <tbody>
+                                            <td>6</td>
+                                            <td>urgency</td>
+                                            <td>긴급도</td>
+                                            <td>VARCHAR</td>
+                                            <td>10</td>
+                                            <td>N</td>
+                                            <td>N</td>
+                                        </tbody>
+                                        <tbody>
+                                            <td>7</td>
+                                            <td>category_name</td>
+                                            <td>통합분류(분야)</td>
+                                            <td>VARCHAR</td>
+                                            <td>50</td>
+                                            <td>N</td>
+                                            <td>N</td>
+                                        </tbody>
+                                        <tbody>
+                                            <td>8</td>
+                                            <td>region_name</td>
+                                            <td>지역분류</td>
+                                            <td>VARCHAR</td>
+                                            <td>50</td>
+                                            <td>N</td>
+                                            <td>N</td>
+                                        </tbody>
+                                        <tbody>
+                                            <td>9</td>
+                                            <td>class_name</td>
+                                            <td>내용분류(속성분류)</td>
+                                            <td>VARCHAR</td>
+                                            <td>50</td>
+                                            <td>N</td>
+                                            <td>N</td>
+                                        </tbody>
+                                        <tbody>
+                                            <td>10</td>
+                                            <td>desk_name</td>
+                                            <td>발행부서</td>
+                                            <td>VARCHAR</td>
+                                            <td>10</td>
+                                            <td>N</td>
+                                            <td>Y</td>
+                                        </tbody>
+                                        <tbody>
+                                            <td>11</td>
+                                            <td>news_title</td>
+                                            <td>제목</td>
+                                            <td>VARCHAR</td>
+                                            <td>100</td>
+                                            <td>N</td>
+                                            <td>Y</td>
+                                        </tbody>
+                                        <tbody>
+                                            <td>12</td>
+                                            <td>sub_title</td>
+                                            <td>부제목</td>
+                                            <td>VARCHAR</td>
+                                            <td>100</td>
+                                            <td>N</td>
+                                            <td>N</td>
+                                        </tbody>
+                                        <tbody>
+                                            <td>13</td>
+                                            <td>char_keyword</td>
+                                            <td>인물 키워드</td>
+                                            <td>VARCHAR</td>
+                                            <td>100</td>
+                                            <td>N</td>
+                                            <td>N</td>
+                                        </tbody>
+                                        <tbody>
+                                            <td>14</td>
+                                            <td>loc_keyword</td>
+                                            <td>위치 키워드</td>
+                                            <td>VARCHAR</td>
+                                            <td>100</td>
+                                            <td>N</td>
+                                            <td>N</td>
+                                        </tbody>
+                                        <tbody>
+                                            <td>15</td>
+                                            <td>org_keyword</td>
+                                            <td>기관 키워드</td>
+                                            <td>VARCHAR</td>
+                                            <td>100</td>
+                                            <td>N</td>
+                                            <td>N</td>
+                                        </tbody>
+                                        <tbody>
+                                            <td>16</td>
+                                            <td>keywords</td>
+                                            <td>키워드</td>
+                                            <td>VARCHAR</td>
+                                            <td>100</td>
+                                            <td>N</td>
+                                            <td>N</td>
+                                        </tbody>
+                                        <tbody>
+                                            <td>17</td>
+                                            <td>news_url</td>
+                                            <td>원본링크</td>
+                                            <td>VARCHAR</td>
+                                            <td>50</td>
+                                            <td>N</td>
+                                            <td>N</td>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>
@@ -69,70 +222,5 @@
 
         <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
-        <script>
-            $(function() {
-                foodRank();
-                userRank();
-            })
-
-            function foodRank() {
-                $.ajax({
-                    url:'/rank/foodRank',
-                    type:'POST',
-                    contentType: "application/json",
-                    dataType:'JSON',
-                    //beforeSend:function(jqXHR) {},// 서버 요청 전 호출 되는 함수 return false; 일 경우 요청 중단
-                    success:function(data) {
-                        for(var i = 0; i < data.length; i++) {
-                            var rank = ""
-                            if(i == 0) {
-                                rank = 'color: gold'
-                            } else if(i == 1) {
-                                rank = 'color: silver'
-                            } else if(i == 2) {
-                                rank = 'color: #cd7f32'
-                            }
-
-                            $('.foodRank').append("<div class='mb-3'><i class='fas fa-crown fa-2x' style='" + rank + "'></i><text style='vertical-align: super; margin-left: 10px;'>" + data[i].kor_F_name + "</text></div>");
-                        }
-                    },// 요청 완료 시
-                    error:function(data) {
-                        console.log("error")
-                    },// 요청 실패.
-                    //complete:function(jqXHR) {}// 요청의 실패, 성공과 상관 없이 완료 될 경우 호출
-                });
-            }
-
-            function userRank() {
-                var gold = new Array();
-                var silver = new Array();
-                var brozen = new Array();
-                $.ajax({
-                    url:'/rank/userRank',
-                    type:'POST',
-                    contentType: "application/json",
-                    dataType:'JSON',
-                    //beforeSend:function(jqXHR) {},// 서버 요청 전 호출 되는 함수 return false; 일 경우 요청 중단
-                    success:function(data) {
-                        for(var i = 0; i < data.length; i++) {
-                            if(data[i].Rank == 1) {
-                                gold.push(data[i].Nickname)
-                            } else if(data[i].Rank == 2) {
-                                silver.push(data[i].Nickname)
-                            } else if(data[i].Rank == 3) {
-                                brozen.push(data[i].Nickname)
-                            }
-                        }
-                        $('.userRank').append("<div class='mb-3'><i class='fas fa-crown fa-2x' style='color: gold'></i><text style='vertical-align: super; margin-left: 10px;'>" + gold + "</text></div>");
-                        $('.userRank').append("<div class='mb-3'><i class='fas fa-crown fa-2x' style='color: silver'></i><text style='vertical-align: super; margin-left: 10px;'>" + silver + "</text></div>");
-                        $('.userRank').append("<div class='mb-3'><i class='fas fa-crown fa-2x' style='color: #cd7f32'></i><text style='vertical-align: super; margin-left: 10px;'>" + brozen + "</text></div>");
-                    },// 요청 완료 시
-                    error:function(data) {
-                        console.log("error")
-                    },// 요청 실패.
-                    //complete:function(jqXHR) {}// 요청의 실패, 성공과 상관 없이 완료 될 경우 호출
-                });
-            }
-        </script>
     </body>
 </html>
